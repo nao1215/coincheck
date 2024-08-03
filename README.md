@@ -85,14 +85,15 @@ If you want to execute the Private API, you need to create a client with the API
 
 | API | Method Name |Description |
 | :--- | :--- | :--- |
-| GET /api/ticker | GetTicker() | Check latest ticker information. |
-| GET /api/trades | GetTrades() | You can get current order transactions. |
+| GET /api/ticker | [GetTicker()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetTicker) | Check latest ticker information. |
+| GET /api/trades | [GetTrades()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetTrades) | You can get current order transactions. |
+| GET /api/order_books | [GetOrderBooks()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetOrderBooks) | Fetch order book information. |
 
 ### Private API
 
 | API | Method Name |Description |
 | :--- | :--- | :--- |
-| GET /api/bank_accounts | GetBankAccounts() | Display list of bank account you registered (withdrawal).|
+| GET /api/bank_accounts | [GetBankAccounts()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetBankAccounts) | Display list of bank account you registered (withdrawal).|
 
 ## License
 
