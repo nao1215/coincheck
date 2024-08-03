@@ -88,6 +88,7 @@ If you want to execute the Private API, you need to create a client with the API
 | GET /api/ticker | [GetTicker()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetTicker) | Check latest ticker information. |
 | GET /api/trades | [GetTrades()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetTrades) | You can get current order transactions. |
 | GET /api/order_books | [GetOrderBooks()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetOrderBooks) | Fetch order book information. |
+| GET /api/exchange/orders/rate | [GetExchangeOrdersRate()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetExchangeOrdersRate) | To calculate the rate from the order of the exchange. |
 | GET /api/rate/[pair] | [GetRate()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetRate) | Get the Standard Rate of Coin. |
 
 ### Private API
