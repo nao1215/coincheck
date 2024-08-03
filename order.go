@@ -8,6 +8,11 @@ import (
 // OrderType represents the order type.
 type OrderType string
 
+// String returns the string representation of the OrderType.
+func (o OrderType) String() string {
+	return string(o)
+}
+
 const (
 	// OrderTypeBuy is the order type of buy.
 	OrderTypeBuy OrderType = "buy"

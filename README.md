@@ -88,6 +88,7 @@ If you want to execute the Private API, you need to create a client with the API
 | GET /api/ticker | [GetTicker()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetTicker) | Check latest ticker information. |
 | GET /api/trades | [GetTrades()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetTrades) | You can get current order transactions. |
 | GET /api/order_books | [GetOrderBooks()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetOrderBooks) | Fetch order book information. |
+| GET /api/exchange/orders/rate | [GetExchangeOrdersRate()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetExchangeOrdersRate) | To calculate the rate from the order of the exchange. |
 | GET /api/rate/[pair] | [GetRate()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetRate) | Get the Standard Rate of Coin. |
 
 ### Private API
@@ -104,6 +105,9 @@ If you want to execute the Private API, you need to create a client with the API
 ## Contribution
 First off, thanks for taking the time to contribute! See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information. Contributions are not only related to development. For example, GitHub Star motivates me to develop! Please feel free to contribute to this project.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=nao1215/coincheck&type=Date)](https://star-history.com/#nao1215/coincheck&Date)
 
 ## Contributors ✨
 
@@ -135,3 +139,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Reasons for Creating the coincheck package
+
+I wanted to create a Bot that is reason why. Another reason is that I started creating it without much thought. Foolish. Now, I would rather have a bitFlyer Bot.
+
+I received a bonus and bought cryptocurrency out of curiosity (I bought it secretly from my spouse and have already lost 10,000 yen). I became interested in the mechanism of cryptocurrency itself, as well as in how to trade cryptocurrency automatically using a Bot.
+
+The cryptocurrency exchanges I use are Coincheck and bitFlyer, with the former being the one where I hold the most coins. Given this situation, it was natural for me to consider creating a Bot for Coincheck.
+
+However, the official Coincheck API client (Golang) was quite simplistic. I had no choice but to create my own. At this point, I realized my mistake. There was a lot of information that could not be gleaned from the official documentation.
