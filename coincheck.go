@@ -9,6 +9,8 @@ package coincheck
 
 import (
 	"context"
+	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -107,4 +109,22 @@ func (c *Client) createRequest(ctx context.Context, input createRequestInput) (*
 	req.Header.Add("content-type", "application/json")
 	req.Header.Add("cache-control", "no-cache")
 	return req, nil
+}
+
+// Do sends an HTTP request and returns an HTTP response.
+func (c *Client) do(req *http.Request, output any) error {
+	resp, err := c.client.Do(req)
+	if err != nil {
+		return withPrefixError(err)
+	}
+	defer resp.Body.Close() //nolint: errcheck // ignore error
+
+	if resp.StatusCode != http.StatusOK {
+		return withPrefixError(fmt.Errorf("unexpected status code=%d", resp.StatusCode))
+	}
+
+	if err := json.NewDecoder(resp.Body).Decode(output); err != nil {
+		return withPrefixError(err)
+	}
+	return nil
 }

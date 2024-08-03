@@ -12,8 +12,8 @@ The coincheck package is a client for the API provided by Coincheck, Inc., which
 - Private API: Requires authentication using the API Key and API Secret issued by the Coincheck service.
 
 The coincheck package supports both Public and Private APIs.
-- [Official API documentation](https://coincheck.com/documents/exchange/api)
-- [Official API client](https://github.com/coincheckjp/coincheck-go)
+- [Coincheck official API documentation](https://coincheck.com/documents/exchange/api)
+- [Coincheck official API client](https://github.com/coincheckjp/coincheck-go)
 
 ## Supported OS and go version
 
@@ -78,7 +78,8 @@ If you want to execute the Private API, you need to create a client with the API
 
 | API | Method Name |Description |
 | :--- | :--- | :--- |
-| GET /api/ticker | GetTicker() | Check latest ticker information |
+| GET /api/ticker | GetTicker() | Check latest ticker information. |
+| GET /api/trades | GetTrades() | You can get current order transactions. |
 
 ### Private API
 
