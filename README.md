@@ -90,6 +90,7 @@ If you want to execute the Private API, you need to create a client with the API
 | GET /api/order_books | [GetOrderBooks()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetOrderBooks) | Fetch order book information. |
 | GET /api/exchange/orders/rate | [GetExchangeOrdersRate()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetExchangeOrdersRate) | To calculate the rate from the order of the exchange. |
 | GET /api/rate/[pair] | [GetRate()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetRate) | Get the Standard Rate of Coin. |
+| GET /api/exchange_status | [GetExchangeStatus()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetExchangeStatus) | Retrieving the status of the exchange. |
 
 ### Private API
 
