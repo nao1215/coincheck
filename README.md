@@ -3,6 +3,13 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/nao1215/coincheck.svg)](https://pkg.go.dev/github.com/nao1215/coincheck)
+![Coverage](https://raw.githubusercontent.com/nao1215/octocovs-central-repo/main/badges/nao1215/coincheck/coverage.svg)
+[![MultiPlatformUnitTest](https://github.com/nao1215/coincheck/actions/workflows/unit_test.yml/badge.svg)](https://github.com/nao1215/coincheck/actions/workflows/unit_test.yml)
+[![reviewdog](https://github.com/nao1215/coincheck/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/nao1215/coincheck/actions/workflows/reviewdog.yml)
+[![gitleaks](https://github.com/nao1215/coincheck/actions/workflows/gitleak.yml/badge.svg)](https://github.com/nao1215/coincheck/actions/workflows/gitleak.yml)
+
+
 >[!IMPORTANT]
 > This library is under development and is not yet ready for production use.
 
@@ -12,8 +19,8 @@ The coincheck package is a client for the API provided by Coincheck, Inc., which
 - Private API: Requires authentication using the API Key and API Secret issued by the Coincheck service.
 
 The coincheck package supports both Public and Private APIs.
-- [Official API documentation](https://coincheck.com/documents/exchange/api)
-- [Official API client](https://github.com/coincheckjp/coincheck-go)
+- [Coincheck official API documentation](https://coincheck.com/documents/exchange/api)
+- [Coincheck official API client](https://github.com/coincheckjp/coincheck-go)
 
 ## Supported OS and go version
 
@@ -78,7 +85,8 @@ If you want to execute the Private API, you need to create a client with the API
 
 | API | Method Name |Description |
 | :--- | :--- | :--- |
-| GET /api/ticker | GetTicker() | Check latest ticker information |
+| GET /api/ticker | GetTicker() | Check latest ticker information. |
+| GET /api/trades | GetTrades() | You can get current order transactions. |
 
 ### Private API
 

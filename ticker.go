@@ -2,8 +2,6 @@ package coincheck
 
 import (
 	"context"
-	"encoding/json"
-	"fmt"
 	"net/http"
 )
 
@@ -76,20 +74,9 @@ func (c *Client) GetTicker(ctx context.Context, input GetTickerInput) (*GetTicke
 		return nil, err
 	}
 
-	resp, err := c.client.Do(req)
-	if err != nil {
-		return nil, withPrefixError(err)
-	}
-	defer resp.Body.Close() //nolint: errcheck // ignore error
-
-	if resp.StatusCode != http.StatusOK {
-		fmt.Println(req.URL)
-		return nil, withPrefixError(fmt.Errorf("unexpected status code=%d", resp.StatusCode))
-	}
-
 	var output GetTickerResponse
-	if err := json.NewDecoder(resp.Body).Decode(&output); err != nil {
-		return nil, withPrefixError(err)
+	if err := c.do(req, &output); err != nil {
+		return nil, err
 	}
 	return &output, nil
 }
