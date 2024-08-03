@@ -3,6 +3,13 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/nao1215/coincheck.svg)](https://pkg.go.dev/github.com/nao1215/coincheck)
+![Coverage](https://raw.githubusercontent.com/nao1215/octocovs-central-repo/main/badges/nao1215/coincheck/coverage.svg)
+[![MultiPlatformUnitTest](https://github.com/nao1215/coincheck/actions/workflows/unit_test.yml/badge.svg)](https://github.com/nao1215/coincheck/actions/workflows/unit_test.yml)
+[![reviewdog](https://github.com/nao1215/coincheck/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/nao1215/coincheck/actions/workflows/reviewdog.yml)
+[![gitleaks](https://github.com/nao1215/coincheck/actions/workflows/gitleak.yml/badge.svg)](https://github.com/nao1215/coincheck/actions/workflows/gitleak.yml)
+
+
 >[!IMPORTANT]
 > This library is under development and is not yet ready for production use.
 
