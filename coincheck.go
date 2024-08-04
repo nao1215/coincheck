@@ -79,6 +79,7 @@ type createRequestInput struct {
 	path       string            // API path (e.g. /api/orders)
 	body       io.Reader         // Request body. If you don't need it, set nil.
 	queryParam map[string]string // Query parameters (e.g. {"pair": "btc_jpy"}) If you don't need it, set nil.
+	private    bool              // If true, it's a private API.
 }
 
 // createRequest creates a new HTTP request.
@@ -108,6 +109,12 @@ func (c *Client) createRequest(ctx context.Context, input createRequestInput) (*
 
 	req.Header.Add("content-type", "application/json")
 	req.Header.Add("cache-control", "no-cache")
+	if input.private {
+		if err := c.setAuthHeaders(req, ""); err != nil {
+			return nil, err
+		}
+	}
+
 	return req, nil
 }
 

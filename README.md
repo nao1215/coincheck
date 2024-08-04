@@ -97,6 +97,7 @@ If you want to execute the Private API, you need to create a client with the API
 | API | Method Name |Description |
 | :--- | :--- | :--- |
 | GET /api/bank_accounts | [GetBankAccounts()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetBankAccounts) | Display list of bank account you registered (withdrawal).|
+| GET /api/accounts/balance | [GetAccountsBalance()](https://pkg.go.dev/github.com/nao1215/coincheck#Client.GetAccountsBalance) | Get the balance of your account. |
 
 ## License
 
