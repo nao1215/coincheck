@@ -34,13 +34,11 @@ type BankAccount struct {
 // Visibility: Private
 func (c *Client) GetBankAccounts(ctx context.Context) (*GetBankAccountsResponse, error) {
 	req, err := c.createRequest(ctx, createRequestInput{
-		method: http.MethodGet,
-		path:   "/api/bank_accounts",
+		method:  http.MethodGet,
+		path:    "/api/bank_accounts",
+		private: true,
 	})
 	if err != nil {
-		return nil, err
-	}
-	if err := c.setAuthHeaders(req, ""); err != nil {
 		return nil, err
 	}
 
